@@ -1,0 +1,109 @@
+:root{
+    
+--color-body-background: hsl(233, 47%, 7%);
+--color-card-background: hsl(244, 38%, 16%);
+--color-Soft-violet: hsl(277, 64%, 61%);
+--color-overlay-violet: hsla(277, 100%, 35%,.5);
+
+--color-White: hsl(0, 0%, 100%);
+--color-main-paragraph: hsla(0, 0%, 100%, 0.75);
+--color-stat-headings : hsla(0, 0%, 100%, 0.6);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    text-align: center;
+    background-color: var(--color-body-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+main{
+    min-width: 322px;
+    max-width: 322px;
+    background-color: var(--color-card-background);
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    display: block;
+        
+}
+.image-wrap{
+    position: relative;
+}
+.image-wrap::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    position: absolute;
+    background-color: var(--color-overlay-violet);
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: inherit;
+    line-height: 1.2;
+    color: var(--color-White);
+    margin: 1.5rem;
+}
+p{ 
+    margin: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-stat-headings);
+}
+
+strong{
+    color: var(--color-Soft-violet);
+    font-weight: inherit;
+}
+span {
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: inherit;
+    color: var(--color-White);
+}
+.experince-profile div{
+    text-transform: uppercase;
+}
+@media (min-width:620px) {
+main{
+    max-width: 920px;
+    flex-direction: row-reverse;
+    text-align: left;
+}
+main > * {
+    flex: 1;
+}
+.image-wrap img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+article{
+    padding: 2rem;
+}
+.experince-profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+    
+}
